@@ -47,9 +47,9 @@ Configuration
 
 This module allows odoo users to set:
 
--  Can be sold: On product packaging level model, this checkbox defines
-   if product packagings from this particular type are available to be
-   selected on sale order line.
+- Can be sold: On product packaging level model, this checkbox defines
+  if product packagings from this particular type are available to be
+  selected on sale order line.
 
 Bug Tracker
 ===========
@@ -72,14 +72,14 @@ Authors
 Contributors
 ------------
 
--  Duong (Tran Quoc) <duongtq@trobz.com>
+- Duong (Tran Quoc) <duongtq@trobz.com>
 
 Other credits
 -------------
 
 The development of this module has been financially supported by:
 
--  Camptocamp
+- Camptocamp
 
 This module feature was extracted from the original
 `sale-workflow/sale_by_packaging <https://github.com/oca/sale-workflow/tree/14.0/sale_by_packaging>`__
