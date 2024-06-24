@@ -20,8 +20,11 @@ class TestPackagingLevelCanBeSold(Common):
             self.order_line.write(
                 {"product_packaging_id": self.packaging_cannot_be_sold.id}
             )
-            onchange_res = self.order_line._onchange_product_packaging_id()
-            self.assertIn("warning", onchange_res)
+
+    def test_onchange_product_packaging_id(self):
+        self.order_line.write({"product_packaging_id": self.packaging_tu.id})
+        result = self.order_line._onchange_product_packaging_id()
+        self.assertIn("warning", result)
 
     def test_product_packaging_can_be_sold(self):
         """Check that a product.packaging can be independently set as can be sold."""
