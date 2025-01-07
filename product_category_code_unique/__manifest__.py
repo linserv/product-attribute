@@ -11,10 +11,10 @@
     "maintainers": ["rousseldenis", "luisg123v"],
     "website": "https://github.com/OCA/product-attribute",
     "depends": [
-        "product",
         "product_category_code",
     ],
     "data": [
+        "views/res_config_settings_views.xml",
         "data/product_category_sequence.xml",
     ],
     "pre_init_hook": "pre_init_hook",
