@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-19 12:18+0000\n"
+"PO-Revision-Date: 2025-02-19 12:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -36,6 +38,12 @@ msgstr ""
 #. module: product_sticker
 #: model:ir.model.fields,field_description:product_sticker.field_product_sticker__product_attribute_value_id
 msgid "Attribute value"
+msgstr ""
+
+#. module: product_sticker
+#: model:ir.model.fields,field_description:product_sticker.field_product_sticker__available_model_ids
+#: model_terms:ir.ui.view,arch_db:product_sticker.product_sticker_search_view
+msgid "Available Models"
 msgstr ""
 
 #. module: product_sticker
@@ -145,6 +153,11 @@ msgstr ""
 #. module: product_sticker
 #: model:ir.model.fields,field_description:product_sticker.field_product_sticker__write_date
 msgid "Last Updated on"
+msgstr ""
+
+#. module: product_sticker
+#: model:ir.model.fields,help:product_sticker.field_product_sticker__available_model_ids
+msgid "Models where this sticker is available. Empty means all models."
 msgstr ""
 
 #. module: product_sticker
