@@ -83,7 +83,7 @@ class IrFilters(models.Model):
         for ir_filter in self.sudo().search([("is_assortment", "=", True)]):
             domain = ir_filter._get_eval_partner_domain()
             for item in domain:
-                if isinstance(item, (list, tuple)) and isinstance(item[0], str):
+                if isinstance(item, list | tuple) and isinstance(item[0], str):
                     field_set.add(item[0].split(".")[0])
         return field_set
 
@@ -138,8 +138,7 @@ class IrFilters(models.Model):
 
     def _compute_record_count(self):
         for record in self:
-            if record.model_id not in self.env:
-                # invalid model
+            if not record.is_assortment:
                 record.record_count = 0
                 continue
             domain = record._get_eval_domain()

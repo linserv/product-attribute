@@ -19,6 +19,14 @@ class TestProductAssortment(TransactionCase):
                 "domain": [],
             }
         )
+        self.filter_no_assortment = self.filter_obj.create(
+            {
+                "name": "Test No Assortment",
+                "model_id": "product.product",
+                "is_assortment": False,
+                "domain": [],
+            }
+        )
         self.partner = self.env["res.partner"].create({"name": "Test partner"})
         self.partner2 = self.env["res.partner"].create({"name": "Test partner 2"})
 
@@ -94,6 +102,8 @@ class TestProductAssortment(TransactionCase):
         self.assertEqual(res["domain"], [("id", "in", [included_product.id])])
 
     def test_record_count(self):
+        self.assertEqual(self.filter_no_assortment.record_count, 0)
+
         products = self.product_obj.search([])
         self.assertEqual(self.assortment.record_count, len(products))
 
