@@ -101,6 +101,29 @@ class TestProductAssortment(TransactionCase):
         res = self.assortment.show_products()
         self.assertEqual(res["domain"], [("id", "in", [included_product.id])])
 
+    def test_product_assortment_view_with_black_list(self):
+        excluded_product = self.env.ref("product.product_product_7")
+        self.assortment.write(
+            {
+                "blacklist_product_ids": [(4, excluded_product.id)],
+            }
+        )
+        res = self.assortment.show_products()
+        self.assertEqual(res["domain"], [("id", "not in", excluded_product.ids)])
+
+    def test_product_assortment_mixed_view(self):
+        included_product = self.env.ref("product.product_product_7")
+        excluded_product = self.env.ref("product.product_product_2")
+        self.assortment.write(
+            {
+                "whitelist_product_ids": [(4, included_product.id)],
+                "blacklist_product_ids": [(4, excluded_product.id)],
+            }
+        )
+        res = self.assortment.show_products()
+        self.assertEqual(res["domain"][1], ("id", "not in", excluded_product.ids))
+        self.assertEqual(res["domain"][2], ("id", "in", included_product.ids))
+
     def test_record_count(self):
         self.assertEqual(self.filter_no_assortment.record_count, 0)
 
@@ -125,6 +148,18 @@ class TestProductAssortment(TransactionCase):
                 "partner_ids": [(4, self.partner2.id)],
             }
         )
+        self.assertEqual(assortment.all_partner_ids, self.partner + self.partner2)
+
+    def test_assortment_update_with_multiple_partner(self):
+        assortment = self.filter_obj.with_context(product_assortment=True).create(
+            {
+                "name": "Test Assortment multiple partner",
+                "partner_domain": "[('name', '=', 'Test partner updated')]",
+                "partner_ids": [(4, self.partner.id), (4, self.partner2.id)],
+            }
+        )
+        self.partner.name = "Test partner updated"
+        self.assertIn(assortment.id, self.partner.applied_assortment_ids.ids)
         self.assertEqual(assortment.all_partner_ids, self.partner + self.partner2)
 
     def test_assortment_with_black_list_product_domain(self):
