@@ -15,7 +15,6 @@
         # Odoo
         "product",
         # OCA
-        "purchase_triple_discount",
         "web_notify",
     ],
     "data": [

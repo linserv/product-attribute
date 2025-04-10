@@ -10,7 +10,7 @@ class SupplierInfo(models.Model):
 
     product_standard_price = fields.Float(
         string="Product actual standard price",
-        compute="_compute_product_standard_price",
+        related="product_tmpl_id.standard_price",
     )
 
     theoritical_standard_price = fields.Float(
@@ -26,22 +26,22 @@ class SupplierInfo(models.Model):
     #
     # Other functions
     #
-    @api.depends("product_id", "product_id.standard_price")
-    def _compute_product_standard_price(self):
-        for supplierinfo in self:
-            supplierinfo.product_standard_price = (
-                supplierinfo.product_tmpl_id.standard_price
-            )
+    def _get_standard_price_fields(self):
+        res = [
+            "product_uom",
+            "currency_id",
+            "price",
+            "product_tmpl_id.uom_po_id",
+            "product_id.uom_po_id",
+        ]
+        # Make the function compatible when "purchase_discount"
+        # or "purchase_triple_discount" are installed
+        for field in ["discount", "discount2", "discount3"]:
+            if field in self._fields:
+                res.append(field)
+        return res
 
-    @api.depends(
-        "price",
-        "discount",
-        "discount2",
-        "discount3",
-        "currency_id",
-        "product_id",
-        "product_tmpl_id",
-    )
+    @api.depends(lambda x: x._get_standard_price_fields())
     def _compute_theoritical_standard_price(self):
         for supplierinfo in self:
             uom = (
@@ -54,21 +54,18 @@ class SupplierInfo(models.Model):
                 supplierinfo.product_tmpl_id.uom_id or supplierinfo.product_id.uom_id
             )
             if uom:
+                price = supplierinfo.price
+                if "discount" in self._fields:
+                    price *= 1 - supplierinfo.discount / 100
+                if "discount2" in self._fields:
+                    price *= 1 - supplierinfo.discount2 / 100
+                if "discount3" in self._fields:
+                    price *= 1 - supplierinfo.discount3 / 100
                 supplierinfo.theoritical_standard_price = currency.round(
-                    uom._compute_price(
-                        (
-                            supplierinfo.price
-                            * (1 - supplierinfo.discount / 100)
-                            * (1 - supplierinfo.discount2 / 100)
-                            * (1 - supplierinfo.discount3 / 100)
-                        ),
-                        destination_uom,
-                    )
+                    uom._compute_price(price, destination_uom)
                 )
 
-    @api.depends(
-        "price", "discount", "discount2", "discount3", "product_standard_price"
-    )
+    @api.depends("theoritical_standard_price", "product_standard_price")
     def _compute_diff_supplierinfo_product_standard_price(self):
         for supplierinfo in self.filtered(lambda x: x.product_tmpl_id):
             supplierinfo.diff_supplierinfo_product_standard_price = (

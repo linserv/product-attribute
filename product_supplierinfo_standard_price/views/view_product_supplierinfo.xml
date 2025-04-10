@@ -10,7 +10,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
         <field name="model">product.supplierinfo</field>
         <field name="inherit_id" ref="product.product_supplierinfo_tree_view" />
         <field name="arch" type="xml">
-          <xpath expr="//tree//field[@name='discount3']" position="after">
+          <xpath expr="//tree//field[@name='currency_id']" position="before">
               <field
                     name="theoritical_standard_price"
                     string="New Price"
