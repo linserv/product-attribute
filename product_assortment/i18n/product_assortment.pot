@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,19 +19,24 @@ msgid "&gt;"
 msgstr ""
 
 #. module: product_assortment
+#: model_terms:ir.ui.view,arch_db:product_assortment.view_partner_form
+msgid "<span class=\"o_stat_text\">Product Assortments</span>"
+msgstr ""
+
+#. module: product_assortment
 #: model_terms:ir.ui.view,arch_db:product_assortment.product_assortment_view_form
 msgid ""
-"<span attrs=\"{'invisible': [('record_count', '&lt;=', 1)]}\">\n"
+"<span invisible=\"record_count &lt;= 1\">\n"
 "                                        Products\n"
 "                                    </span>\n"
-"                                    <span attrs=\"{'invisible': [('record_count', '&gt;', 1)]}\">\n"
+"                                    <span invisible=\"record_count &gt; 1\">\n"
 "                                        Product\n"
 "                                    </span>"
 msgstr ""
 
 #. module: product_assortment
-#: model_terms:ir.ui.view,arch_db:product_assortment.view_partner_form
-msgid "<span class=\"o_stat_text\">Product Assortments</span>"
+#: model:res.groups,comment:product_assortment.group_product_assortment_manager
+msgid "Access to all product assortment"
 msgstr ""
 
 #. module: product_assortment
@@ -123,13 +128,17 @@ msgid "Product Assortment"
 msgstr ""
 
 #. module: product_assortment
+#: model:res.groups,name:product_assortment.group_product_assortment_manager
+msgid "Product Assortment Manager"
+msgstr ""
+
+#. module: product_assortment
 #: model:ir.actions.act_window,name:product_assortment.actions_product_assortment_view
 msgid "Product assortment"
 msgstr ""
 
 #. module: product_assortment
 #: model:ir.actions.server,name:product_assortment.action_product_assortment_recompute_all_partners
-#: model:ir.cron,cron_name:product_assortment.ir_cron_product_assortment_recompute_all_partners
 msgid "Product assortment recompute all partbers"
 msgstr ""
 
