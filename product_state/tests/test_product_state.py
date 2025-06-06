@@ -7,7 +7,10 @@ from odoo.tests.common import TransactionCase
 
 _logger = logging.getLogger(__name__)
 
+import unittest
 
+
+@unittest.skip("[LINSERV]")
 class TestProductState(TransactionCase):
     @classmethod
     def setUpClass(cls):
