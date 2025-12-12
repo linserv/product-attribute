@@ -51,9 +51,10 @@ addon | version | maintainers | summary
 [product_manufacturer](product_manufacturer/) | 18.0.1.0.0 |  | Adds manufacturers and attributes on the product view.
 [product_medical](product_medical/) | 18.0.1.0.0 |  | Base structure to handle medical products
 [product_multi_category](product_multi_category/) | 18.0.1.0.0 |  | Product - Many Categories
-[product_multi_price](product_multi_price/) | 18.0.1.0.0 |  | Product Multi Price
+[product_multi_price](product_multi_price/) | 18.0.1.0.1 |  | Product Multi Price
 [product_net_weight](product_net_weight/) | 18.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Add 'Net Weight' on product models
 [product_origin](product_origin/) | 18.0.1.0.0 | <a href='https://github.com/rousseldenis'><img src='https://github.com/rousseldenis.png' width='32' height='32' style='border-radius:50%;' alt='rousseldenis'/></a> <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Adds the origin of the product
+[product_packaging_archive](product_packaging_archive/) | 18.0.1.0.0 |  | Add an active field on product packaging
 [product_packaging_calculator](product_packaging_calculator/) | 18.0.1.0.0 |  | Compute product quantity to pick by packaging
 [product_packaging_calculator_packaging_level](product_packaging_calculator_packaging_level/) | 18.0.1.0.0 |  | Glue module for packaging level
 [product_packaging_dimension](product_packaging_dimension/) | 18.0.1.0.0 |  | Manage packaging dimensions and weight
@@ -68,6 +69,7 @@ addon | version | maintainers | summary
 [product_pricelist_direct_print_website_sale](product_pricelist_direct_print_website_sale/) | 18.0.1.0.0 | <a href='https://github.com/CarlosRoca13'><img src='https://github.com/CarlosRoca13.png' width='32' height='32' style='border-radius:50%;' alt='CarlosRoca13'/></a> | Extend Product Pricelist Direct Print for filter by public categories
 [product_pricelist_direct_print_xlsx](product_pricelist_direct_print_xlsx/) | 18.0.1.0.2 |  | Print price list in XLSX format
 [product_pricelist_fixed_currency_rate](product_pricelist_fixed_currency_rate/) | 18.0.1.0.0 | <a href='https://github.com/LoisRForgeFlow'><img src='https://github.com/LoisRForgeFlow.png' width='32' height='32' style='border-radius:50%;' alt='LoisRForgeFlow'/></a> <a href='https://github.com/kobros-tech'><img src='https://github.com/kobros-tech.png' width='32' height='32' style='border-radius:50%;' alt='kobros-tech'/></a> | Set a fixed currency rate between pricelists
+[product_pricelist_item_list_view](product_pricelist_item_list_view/) | 18.0.1.0.0 | <a href='https://github.com/LoisRForgeFlow'><img src='https://github.com/LoisRForgeFlow.png' width='32' height='32' style='border-radius:50%;' alt='LoisRForgeFlow'/></a> | View and search the list of pricelist items
 [product_pricelist_revision](product_pricelist_revision/) | 18.0.1.0.0 |  | Product Pricelist Revision
 [product_pricelist_supplierinfo](product_pricelist_supplierinfo/) | 18.0.1.1.0 | <a href='https://github.com/luisg123v'><img src='https://github.com/luisg123v.png' width='32' height='32' style='border-radius:50%;' alt='luisg123v'/></a> | Allows to create priceslists based on supplier info
 [product_print_category](product_print_category/) | 18.0.1.0.1 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Define print categories for products and automate products print, when data has changed
