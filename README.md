@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [nutritional_info](nutritional_info/) | 18.0.1.0.0 | <a href='https://github.com/CarlosRoca13'><img src='https://github.com/CarlosRoca13.png' width='32' height='32' style='border-radius:50%;' alt='CarlosRoca13'/></a> | Nutritional information.
+[pos_product_cost_security](pos_product_cost_security/) | 18.0.1.0.0 |  | Compatibility between Point of Sale and Product Cost Security
 [product_abc_classification](product_abc_classification/) | 18.0.1.0.0 |  | ABC classification for sales and warehouse management
 [product_assortment](product_assortment/) | 18.0.1.0.1 |  | Adds the ability to manage products assortment
 [product_attachment_zipped_download](product_attachment_zipped_download/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Product Attachment Zipped Download
@@ -106,6 +107,7 @@ addon | version | maintainers | summary
 [product_supplierinfo_stock_picking_type](product_supplierinfo_stock_picking_type/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Product supplierinfo stock picking type
 [product_tag_view](product_tag_view/) | 18.0.1.0.0 | <a href='https://github.com/yostashiro'><img src='https://github.com/yostashiro.png' width='32' height='32' style='border-radius:50%;' alt='yostashiro'/></a> <a href='https://github.com/aungkokolin1997'><img src='https://github.com/aungkokolin1997.png' width='32' height='32' style='border-radius:50%;' alt='aungkokolin1997'/></a> | Show product tags on General Information tab
 [product_tags_code](product_tags_code/) | 18.0.1.0.0 |  | This addon allow to add code on products tags
+[product_tier_validation](product_tier_validation/) | 18.0.1.0.0 | <a href='https://github.com/dreispt'><img src='https://github.com/dreispt.png' width='32' height='32' style='border-radius:50%;' alt='dreispt'/></a> | Support a tier validation process for Products
 [product_total_weight_from_packaging](product_total_weight_from_packaging/) | 18.0.1.0.0 |  | Compute estimated weight based on product's packaging weights
 [product_uom_updatable](product_uom_updatable/) | 18.0.1.0.0 |  | allows products uom to be modified after be used in a stock picking if the product uom is of the same category
 [product_usability](product_usability/) | 18.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Adds missing menu entries for Product module and adds extra groups to fine-tune access rights
