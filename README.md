@@ -56,7 +56,7 @@ addon | version | maintainers | summary
 [product_ingredient](product_ingredient/) | 18.0.1.0.1 | <a href='https://github.com/sergio-teruel'><img src='https://github.com/sergio-teruel.png' width='32' height='32' style='border-radius:50%;' alt='sergio-teruel'/></a> | Product ingredients
 [product_list_price_from_pricelist](product_list_price_from_pricelist/) | 18.0.1.0.0 | <a href='https://github.com/carlos-lopez-tecnativa'><img src='https://github.com/carlos-lopez-tecnativa.png' width='32' height='32' style='border-radius:50%;' alt='carlos-lopez-tecnativa'/></a> | Compute product sales price from a pricelist
 [product_logistics_uom](product_logistics_uom/) | 18.0.1.1.0 | <a href='https://github.com/hparfr'><img src='https://github.com/hparfr.png' width='32' height='32' style='border-radius:50%;' alt='hparfr'/></a> | Configure product weights and volume UoM
-[product_lot_sequence](product_lot_sequence/) | 18.0.1.0.0 |  | Adds ability to define a lot sequence from the product
+[product_lot_sequence](product_lot_sequence/) | 18.0.2.0.0 | <a href='https://github.com/rafaelbn'><img src='https://github.com/rafaelbn.png' width='32' height='32' style='border-radius:50%;' alt='rafaelbn'/></a> <a href='https://github.com/chienandalu'><img src='https://github.com/chienandalu.png' width='32' height='32' style='border-radius:50%;' alt='chienandalu'/></a> | Adds ability to define a lot sequence from the product
 [product_main_supplierinfo](product_main_supplierinfo/) | 18.0.1.0.0 | <a href='https://github.com/sebalix'><img src='https://github.com/sebalix.png' width='32' height='32' style='border-radius:50%;' alt='sebalix'/></a> | Display the main vendor of a product.
 [product_manufacturer](product_manufacturer/) | 18.0.1.0.0 |  | Adds manufacturers and attributes on the product view.
 [product_medical](product_medical/) | 18.0.1.0.0 |  | Base structure to handle medical products
@@ -69,7 +69,7 @@ addon | version | maintainers | summary
 [product_packaging_calculator](product_packaging_calculator/) | 18.0.1.0.1 |  | Compute product quantity to pick by packaging
 [product_packaging_calculator_packaging_level](product_packaging_calculator_packaging_level/) | 18.0.1.0.0 |  | Glue module for packaging level
 [product_packaging_dimension](product_packaging_dimension/) | 18.0.1.0.0 |  | Manage packaging dimensions and weight
-[product_packaging_level](product_packaging_level/) | 18.0.1.1.0 |  | This module binds a product packaging to a packaging level
+[product_packaging_level](product_packaging_level/) | 18.0.1.1.1 |  | This module binds a product packaging to a packaging level
 [product_packaging_level_salable](product_packaging_level_salable/) | 18.0.1.0.1 |  | Product Packaging level salable
 [product_packaging_level_vendor](product_packaging_level_vendor/) | 18.0.1.0.0 |  | Allows to mark a packaging level as vendor specific
 [product_packaging_unit_price_calculator](product_packaging_unit_price_calculator/) | 18.0.1.0.0 |  | Wizard to calculate a unit price from a packaging price
@@ -112,6 +112,7 @@ addon | version | maintainers | summary
 [product_supplierinfo_comment](product_supplierinfo_comment/) | 18.0.1.0.0 |  | Add the comment field to the product supplier info
 [product_supplierinfo_import](product_supplierinfo_import/) | 18.0.1.1.0 |  | Import supplier pricelists
 [product_supplierinfo_import_margin](product_supplierinfo_import_margin/) | 18.0.1.0.0 |  | Import supplier pricelists and margins
+[product_supplierinfo_incoterm](product_supplierinfo_incoterm/) | 18.0.1.0.0 |  | Add an incoterm on vendor pricelists, defaulted from the vendor
 [product_supplierinfo_revision](product_supplierinfo_revision/) | 18.0.1.0.0 |  | Product Supplierinfo Revision
 [product_supplierinfo_stock_picking_type](product_supplierinfo_stock_picking_type/) | 18.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Product supplierinfo stock picking type
 [product_tag_view](product_tag_view/) | 18.0.1.0.0 | <a href='https://github.com/yostashiro'><img src='https://github.com/yostashiro.png' width='32' height='32' style='border-radius:50%;' alt='yostashiro'/></a> <a href='https://github.com/aungkokolin1997'><img src='https://github.com/aungkokolin1997.png' width='32' height='32' style='border-radius:50%;' alt='aungkokolin1997'/></a> | Show product tags on General Information tab
